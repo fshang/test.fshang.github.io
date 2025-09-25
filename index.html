@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP教程博客 - Minecraft服务器控制面板完全指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- 导航栏 -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <i class="fa fa-server text-primary text-2xl"></i>
+                <span class="font-bold text-xl text-dark">MCP教程</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-primary transition-colors">首页</a>
+                <a href="#tutorials" class="text-gray-700 hover:text-primary transition-colors">教程</a>
+                <a href="#faq" class="text-gray-700 hover:text-primary transition-colors">常见问题</a>
+                <a href="#about" class="text-gray-700 hover:text-primary transition-colors">关于</a>
+            </nav>
+            <button class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- 英雄区 -->
+    <section id="home" class="bg-gradient-to-r from-primary to-blue-700 text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-4 text-shadow">
+                Minecraft服务器控制面板<br>MCP完全指南
+            </h1>
+            <p class="text-[clamp(1rem,2vw,1.25rem)] max-w-2xl mx-auto mb-8 opacity-90">
+                从入门到精通，全面掌握MCP的安装、配置与优化，打造专业级Minecraft服务器
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#tutorials" class="bg-white text-primary font-medium py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    开始学习 <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+                <a href="https://github.com/test-fshang/test.fshang.github.io" target="_blank" class="bg-transparent border-2 border-white text-white font-medium py-3 px-6 rounded-lg hover:bg-white/10 transition-all">
+                    <i class="fa fa-github mr-2"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要教程内容 -->
+    <section id="tutorials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">MCP教程系列</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">详细的MCP安装、配置和优化指南，帮助你快速上手并掌握高级功能</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 教程卡片1 -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-primary/10 flex items-center justify-center">
+                        <i class="fa fa-download text-primary text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-blue-100 text-primary text-xs font-semibold rounded-full mb-4">基础教程</span>
+                        <h3 class="text-xl font-bold mb-3">MCP的安装与初始配置</h3>
+                        <p class="text-gray-600 mb-4">学习如何下载、安装MCP，并进行基本配置，让你的服务器控制面板快速运行起来。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> 15分钟阅读</span>
+                            <a href="#" class="text-primary font-medium hover:underline">继续阅读 →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 教程卡片2 -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-secondary/10 flex items-center justify-center">
+                        <i class="fa fa-cog text-secondary text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-green-100 text-secondary text-xs font-semibold rounded-full mb-4">进阶教程</span>
+                        <h3 class="text-xl font-bold mb-3">高级功能设置详解</h3>
+                        <p class="text-gray-600 mb-4">深入了解MCP的高级功能，包括用户权限管理、服务器监控和自动化脚本配置。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> 25分钟阅读</span>
+                            <a href="#" class="text-secondary font-medium hover:underline">继续阅读 →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 教程卡片3 -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fa fa-bolt text-purple-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-purple-100 text-purple-600 text-xs font-semibold rounded-full mb-4">优化教程</span>
+                        <h3 class="text-xl font-bold mb-3">MCP性能优化指南</h3>
+                        <p class="text-gray-600 mb-4">学习如何优化MCP的性能，提高服务器响应速度，降低资源占用。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> 20分钟阅读</span>
+                            <a href="#" class="text-purple-600 font-medium hover:underline">继续阅读 →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 教程卡片4 -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-red-100 flex items-center justify-center">
+                        <i class="fa fa-bug text-red-500 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-red-100 text-red-500 text-xs font-semibold rounded-full mb-4">故障排除</span>
+                        <h3 class="text-xl font-bold mb-3">常见问题与解决方案</h3>
+                        <p class="text-gray-600 mb-4">解决在使用MCP过程中可能遇到的各种问题，包括连接失败、启动错误等。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> 30分钟阅读</span>
+                            <a href="#" class="text-red-500 font-medium hover:underline">继续阅读 →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 教程卡片5 -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-yellow-100 flex items-center justify-center">
+                        <i class="fa fa-puzzle-piece text-yellow-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-semibold rounded-full mb-4">开发教程</span>
+                        <h3 class="text-xl font-bold mb-3">MCP插件开发入门</h3>
+                        <p class="text-gray-600 mb-4">学习如何为MCP开发自定义插件，扩展控制面板的功能。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> 40分钟阅读</span>
+                            <a href="#" class="text-yellow-600 font-medium hover:underline">继续阅读 →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 教程卡片6 -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center">
+                        <i class="fa fa-users text-gray-700 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-full mb-4">管理教程</span>
+                        <h3 class="text-xl font-bold mb-3">多服务器管理技巧</h3>
+                        <p class="text-gray-600 mb-4">学习如何使用MCP同时管理多个Minecraft服务器，提高管理效率。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> 25分钟阅读</span>
+                            <a href="#" class="text-gray-700 font-medium hover:underline">继续阅读 →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 精选教程内容 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-8 text-center">精选教程：MCP的安装与初始配置</h2>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="p-6 md:p-8">
+                    <div class="prose max-w-none">
+                        <h3 class="text-xl font-bold mb-4">1. 准备工作</h3>
+                        <p class="mb-4">在安装MCP之前，确保你的服务器满足以下要求：</p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li>操作系统：Windows 10/Server 2016或更高版本，或Linux发行版（推荐Ubuntu 20.04+）</li>
+                            <li>内存：至少4GB RAM（推荐8GB+）</li>
+                            <li>处理器：至少2核CPU</li>
+                            <li>磁盘空间：至少20GB可用空间</li>
+                            <li>已安装Java 8或更高版本</li>
+                            <li>稳定的网络连接</li>
+                        </ul>
+
+                        <h3 class="text-xl font-bold mb-4">2. 下载MCP</h3>
+                        <p class="mb-4">首先，访问MCP的官方网站或GitHub仓库下载最新版本的安装包：</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># Linux系统使用wget下载
+wget https://github.com/MinecraftControlPanel/MCP/releases/download/v2.0.0/mcp-installer-linux.tar.gz
+
+# 解压安装包
+tar -xzf mcp-installer-linux.tar.gz</code></pre>
+
+                        <h3 class="text-xl font-bold mb-4">3. 安装MCP</h3>
+                        <p class="mb-4">解压后，运行安装脚本开始安装过程：</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># 进入解压目录
+cd mcp-installer-linux
+
+# 运行安装脚本（Linux需要管理员权限）
+sudo ./install.sh
+
+# Windows系统直接双击install.bat文件</code></pre>
+
+                        <h3 class="text-xl font-bold mb-4">4. 初始配置</h3>
+                        <p class="mb-4">安装完成后，需要进行初始配置。打开浏览器，访问以下地址：</p>
+                        <p class="mb-4 font-medium">http://服务器IP:8080</p>
+                        <p class="mb-4">首次访问时，你需要设置管理员账户和基本配置：</p>
+                        <ol class="list-decimal pl-6 mb-6 space-y-2">
+                            <li>设置管理员用户名和密码</li>
+                            <li>配置数据库连接（默认使用内置SQLite，也可选择MySQL）</li>
+                            <li>设置服务器名称和描述</li>
+                            <li>配置网络设置（端口、域名等）</li>
+                        </ol>
+
+                        <h3 class="text-xl font-bold mb-4">5. 添加你的第一个Minecraft服务器</h3>
+                        <p class="mb-4">配置完成后，你可以开始添加你的第一个Minecraft服务器：</p>
+                        <ol class="list-decimal pl-6 mb-6 space-y-2">
+                            <li>登录MCP控制面板</li>
+                            <li>点击左侧菜单的"服务器管理"</li>
+                            <li>点击"添加服务器"按钮</li>
+                            <li>填写服务器信息：名称、路径、Java参数等</li>
+                            <li>点击"保存"并启动服务器</li>
+                        </ol>
+
+                        <h3 class="text-xl font-bold mb-4">6. 配置防火墙</h3>
+                        <p class="mb-4">确保你的服务器防火墙已经开放了必要的端口：</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># Linux系统（Ubuntu/Debian）
+sudo ufw allow 8080/tcp  # MCP控制面板端口
+sudo ufw allow 25565/tcp # Minecraft服务器默认端口
+sudo ufw reload</code></pre>
+
+                        <h3 class="text-xl font-bold mb-4">7. 完成安装</h3>
+                        <p>恭喜！你已经成功安装并配置了MCP。现在你可以通过浏览器访问控制面板，开始管理你的Minecraft服务器了。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">常见问题</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">解答在使用MCP过程中可能遇到的常见问题</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ项目1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-medium flex justify-between items-center focus:outline-none">
+                        <span>MCP支持哪些操作系统？</span>
+                        <i class="fa fa-chevron-down text-gray-500 transition-transform"></i>
+                    </button>
+                    <div class="px-6 py-4 text-gray-600 border-t border-gray-200">
+                        <p>MCP支持多种操作系统，包括Windows 10/Server 2016或更高版本，以及主流Linux发行版如Ubuntu、Debian、CentOS等。推荐使用Ubuntu 20.04或更高版本以获得最佳性能和兼容性。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ项目2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-medium flex justify-between items-center focus:outline-none">
+                        <span>如何更新MCP到最新版本？</span>
+                        <i class="fa fa-chevron-down text-gray-500 transition-transform"></i>
+                    </button>
+                    <div class="px-6 py-4 text-gray-600 border-t border-gray-200">
+                        <p>更新MCP非常简单。在控制面板中，点击右上角的设置图标，然后选择"系统更新"。系统会检查并下载最新版本，完成后按照提示重启MCP服务即可。建议在更新前备份重要数据。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ项目3 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-medium flex justify-between items-center focus:outline-none">
+                        <span>我可以同时管理多少个Minecraft服务器？</span>
+                        <i class="fa fa-chevron-down text-gray-500 transition-transform"></i>
+                    </button>
+                    <div class="px-6 py-4 text-gray-600 border-t border-gray-200">
+                        <p>MCP理论上可以同时管理无限多个Minecraft服务器，但实际数量取决于你的服务器硬件性能。每个服务器都会消耗一定的CPU、内存和磁盘资源。建议根据你的服务器配置合理规划服务器数量，以确保系统稳定运行。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅区域 -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">获取最新MCP教程和更新</h2>
+            <p class="text-white/80 max-w-2xl mx-auto mb-8">订阅我们的电子邮件，第一时间获取MCP的最新教程、更新和技巧</p>
+            <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+                <input type="email" placeholder="输入你的邮箱地址" class="flex-1 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white text-gray-800">
+                <button type="submit" class="bg-white text-primary font-medium py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition-colors">
+                    订阅 <i class="fa fa-paper-plane ml-2"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">关于MCP教程博客</h2>
+                <p class="text-gray-600 mb-8">我们致力于提供高质量的Minecraft服务器控制面板教程，帮助服务器管理员更轻松地管理和优化他们的服务器。</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://github.com/test-fshang" target="_blank" class="text-gray-600 hover:text-primary transition-colors">
+                        <i class="fa fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="text-gray-600 hover:text-primary transition-colors">
+                        <i class="fa fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="https://discord.com" target="_blank" class="text-gray-600 hover:text-primary transition-colors">
+                        <i class="fa fa-discord text-2xl"></i>
+                    </a>
+                </div>
+                <p class="text-gray-500 text-sm">© 2023 MCP教程博客. 保留所有权利。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700 focus:outline-none">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // FAQ折叠功能
+        document.querySelectorAll('#faq button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 移动端菜单
+        const menuButton = document.querySelector('button.md\:hidden');
+        const navMenu = document.querySelector('nav.md\:flex');
+        
+        menuButton.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+            navMenu.classList.toggle('flex');
+            navMenu.classList.toggle('flex-col');
+            navMenu.classList.toggle('absolute');
+            navMenu.classList.toggle('top-full');
+            navMenu.classList.toggle('left-0');
+            navMenu.classList.toggle('w-full');
+            navMenu.classList.toggle('bg-white');
+            navMenu.classList.toggle('shadow-md');
+            navMenu.classList.toggle('py-4');
+            navMenu.classList.toggle('px-6');
+            navMenu.classList.toggle('z-50');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // 关闭移动端菜单
+                    if (!navMenu.classList.contains('md:flex')) {
+                        navMenu.classList.add('hidden');
+                        navMenu.classList.remove('flex');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
