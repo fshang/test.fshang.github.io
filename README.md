@@ -1,22 +1,23 @@
-# MCP示例教程
+# MCP教程博客 - 模型上下文协议完全指南
 
-这是一个使用GitHub Pages搭建的技术博客，主要提供Minecraft服务器控制面板(MCP)的详细教程和指南。
+这是一个使用GitHub Pages搭建的技术博客，主要提供Anthropic的模型上下文协议(MCP)的详细教程和指南。
 
 ## 关于MCP
 
-Minecraft服务器控制面板(MCP)是一个用于管理和监控Minecraft服务器的强大工具。通过本博客，你将学习如何安装、配置和优化MCP，提升你的服务器管理体验。
+模型上下文协议(MCP)是Anthropic推出的一个协议，用于实现大语言模型与外部数据源和工具的安全集成。通过本博客，你将学习如何安装、配置和使用MCP，实现大语言模型与外部系统的无缝连接。
 
 ## 博客内容
 
 - MCP的安装与初始配置
-- 高级功能设置
-- 常见问题解决方案
-- 性能优化技巧
-- 插件开发指南
+- 创建你的第一个MCP服务
+- MCP高级功能与安全
+- MCP常见问题与解决方案
+- MCP客户端开发指南
+- MCP实战案例解析
 
 ## 访问方式
 
-博客地址：[https://fshang.github.io/test.fshang.github.io/](view now)
+博客地址：[view now](https://fshang.github.io/test.fshang.github.io/)
 
 ## 如何贡献
 
