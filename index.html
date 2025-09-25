@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCP教程博客 - Minecraft服务器控制面板完全指南</title>
+    <title>MCP教程博客 - 模型上下文协议完全指南</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script>
@@ -11,10 +11,10 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#3B82F6',
-                        secondary: '#10B981',
-                        dark: '#1F2937',
-                        light: '#F9FAFB',
+                        primary: '#6366F1', // 靛蓝色，代表技术和创新
+                        secondary: '#10B981', // 绿色，代表进步和成功
+                        dark: '#1F2937', // 深色，代表专业和稳重
+                        light: '#F9FAFB', // 浅色，代表简洁和清晰
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -46,7 +46,7 @@
     <header class="sticky top-0 z-50 bg-white shadow-sm">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="#" class="flex items-center space-x-2">
-                <i class="fa fa-server text-primary text-2xl"></i>
+                <i class="fa fa-plug text-primary text-2xl"></i>
                 <span class="font-bold text-xl text-dark">MCP教程</span>
             </a>
             <nav class="hidden md:flex space-x-8">
@@ -62,20 +62,20 @@
     </header>
 
     <!-- 英雄区 -->
-    <section id="home" class="bg-gradient-to-r from-primary to-blue-700 text-white py-16 md:py-24">
+    <section id="home" class="bg-gradient-to-r from-primary to-indigo-700 text-white py-16 md:py-24">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-4 text-shadow">
-                Minecraft服务器控制面板<br>MCP完全指南
+                模型上下文协议<br>MCP完全指南
             </h1>
             <p class="text-[clamp(1rem,2vw,1.25rem)] max-w-2xl mx-auto mb-8 opacity-90">
-                从入门到精通，全面掌握MCP的安装、配置与优化，打造专业级Minecraft服务器
+                从入门到精通，全面掌握Anthropic的MCP协议，实现大语言模型与外部数据源的安全集成
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#tutorials" class="bg-white text-primary font-medium py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
                     开始学习 <i class="fa fa-arrow-right ml-2"></i>
                 </a>
-                <a href="https://github.com/test-fshang/test.fshang.github.io" target="_blank" class="bg-transparent border-2 border-white text-white font-medium py-3 px-6 rounded-lg hover:bg-white/10 transition-all">
-                    <i class="fa fa-github mr-2"></i> GitHub
+                <a href="https://github.com/anthropics/mcp" target="_blank" class="bg-transparent border-2 border-white text-white font-medium py-3 px-6 rounded-lg hover:bg-white/10 transition-all">
+                    <i class="fa fa-github mr-2"></i> MCP官方仓库
                 </a>
             </div>
         </div>
@@ -86,7 +86,7 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">MCP教程系列</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">详细的MCP安装、配置和优化指南，帮助你快速上手并掌握高级功能</p>
+                <p class="text-gray-600 max-w-2xl mx-auto">详细的MCP安装、配置和使用指南，帮助你快速上手并掌握高级功能</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -96,9 +96,9 @@
                         <i class="fa fa-download text-primary text-6xl"></i>
                     </div>
                     <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-blue-100 text-primary text-xs font-semibold rounded-full mb-4">基础教程</span>
+                        <span class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-semibold rounded-full mb-4">基础教程</span>
                         <h3 class="text-xl font-bold mb-3">MCP的安装与初始配置</h3>
-                        <p class="text-gray-600 mb-4">学习如何下载、安装MCP，并进行基本配置，让你的服务器控制面板快速运行起来。</p>
+                        <p class="text-gray-600 mb-4">学习如何下载、安装MCP，并进行基本配置，让你的模型上下文协议快速运行起来。</p>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> 15分钟阅读</span>
                             <a href="#" class="text-primary font-medium hover:underline">继续阅读 →</a>
@@ -109,12 +109,12 @@
                 <!-- 教程卡片2 -->
                 <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
                     <div class="h-48 bg-secondary/10 flex items-center justify-center">
-                        <i class="fa fa-cog text-secondary text-6xl"></i>
+                        <i class="fa fa-server text-secondary text-6xl"></i>
                     </div>
                     <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-green-100 text-secondary text-xs font-semibold rounded-full mb-4">进阶教程</span>
-                        <h3 class="text-xl font-bold mb-3">高级功能设置详解</h3>
-                        <p class="text-gray-600 mb-4">深入了解MCP的高级功能，包括用户权限管理、服务器监控和自动化脚本配置。</p>
+                        <span class="inline-block px-3 py-1 bg-green-100 text-secondary text-xs font-semibold rounded-full mb-4">核心教程</span>
+                        <h3 class="text-xl font-bold mb-3">创建你的第一个MCP服务</h3>
+                        <p class="text-gray-600 mb-4">详细讲解如何创建和部署一个MCP服务，实现大模型与外部数据源的安全连接。</p>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> 25分钟阅读</span>
                             <a href="#" class="text-secondary font-medium hover:underline">继续阅读 →</a>
@@ -125,12 +125,12 @@
                 <!-- 教程卡片3 -->
                 <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
                     <div class="h-48 bg-purple-100 flex items-center justify-center">
-                        <i class="fa fa-bolt text-purple-600 text-6xl"></i>
+                        <i class="fa fa-cog text-purple-600 text-6xl"></i>
                     </div>
                     <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-purple-100 text-purple-600 text-xs font-semibold rounded-full mb-4">优化教程</span>
-                        <h3 class="text-xl font-bold mb-3">MCP性能优化指南</h3>
-                        <p class="text-gray-600 mb-4">学习如何优化MCP的性能，提高服务器响应速度，降低资源占用。</p>
+                        <span class="inline-block px-3 py-1 bg-purple-100 text-purple-600 text-xs font-semibold rounded-full mb-4">进阶教程</span>
+                        <h3 class="text-xl font-bold mb-3">MCP高级功能与安全</h3>
+                        <p class="text-gray-600 mb-4">深入了解MCP的高级功能，包括安全机制、权限控制和性能优化。</p>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> 20分钟阅读</span>
                             <a href="#" class="text-purple-600 font-medium hover:underline">继续阅读 →</a>
@@ -145,8 +145,8 @@
                     </div>
                     <div class="p-6">
                         <span class="inline-block px-3 py-1 bg-red-100 text-red-500 text-xs font-semibold rounded-full mb-4">故障排除</span>
-                        <h3 class="text-xl font-bold mb-3">常见问题与解决方案</h3>
-                        <p class="text-gray-600 mb-4">解决在使用MCP过程中可能遇到的各种问题，包括连接失败、启动错误等。</p>
+                        <h3 class="text-xl font-bold mb-3">MCP常见问题与解决方案</h3>
+                        <p class="text-gray-600 mb-4">解决在使用MCP过程中可能遇到的各种问题，包括连接失败、安全配置错误等。</p>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> 30分钟阅读</span>
                             <a href="#" class="text-red-500 font-medium hover:underline">继续阅读 →</a>
@@ -156,32 +156,32 @@
 
                 <!-- 教程卡片5 -->
                 <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
-                    <div class="h-48 bg-yellow-100 flex items-center justify-center">
-                        <i class="fa fa-puzzle-piece text-yellow-600 text-6xl"></i>
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fa fa-code text-blue-600 text-6xl"></i>
                     </div>
                     <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-semibold rounded-full mb-4">开发教程</span>
-                        <h3 class="text-xl font-bold mb-3">MCP插件开发入门</h3>
-                        <p class="text-gray-600 mb-4">学习如何为MCP开发自定义插件，扩展控制面板的功能。</p>
+                        <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-xs font-semibold rounded-full mb-4">开发教程</span>
+                        <h3 class="text-xl font-bold mb-3">MCP客户端开发指南</h3>
+                        <p class="text-gray-600 mb-4">学习如何开发MCP客户端，实现与大语言模型的无缝集成。</p>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> 40分钟阅读</span>
-                            <a href="#" class="text-yellow-600 font-medium hover:underline">继续阅读 →</a>
+                            <a href="#" class="text-blue-600 font-medium hover:underline">继续阅读 →</a>
                         </div>
                     </div>
                 </article>
 
                 <!-- 教程卡片6 -->
                 <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
-                    <div class="h-48 bg-gray-100 flex items-center justify-center">
-                        <i class="fa fa-users text-gray-700 text-6xl"></i>
+                    <div class="h-48 bg-yellow-100 flex items-center justify-center">
+                        <i class="fa fa-lightbulb-o text-yellow-600 text-6xl"></i>
                     </div>
                     <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-full mb-4">管理教程</span>
-                        <h3 class="text-xl font-bold mb-3">多服务器管理技巧</h3>
-                        <p class="text-gray-600 mb-4">学习如何使用MCP同时管理多个Minecraft服务器，提高管理效率。</p>
+                        <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-semibold rounded-full mb-4">应用案例</span>
+                        <h3 class="text-xl font-bold mb-3">MCP实战案例解析</h3>
+                        <p class="text-gray-600 mb-4">分析真实世界中的MCP应用案例，了解如何在实际项目中应用MCP协议。</p>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> 25分钟阅读</span>
-                            <a href="#" class="text-gray-700 font-medium hover:underline">继续阅读 →</a>
+                            <a href="#" class="text-yellow-600 font-medium hover:underline">继续阅读 →</a>
                         </div>
                     </div>
                 </article>
@@ -189,73 +189,265 @@
         </div>
     </section>
 
-    <!-- 精选教程内容 -->
+    <!-- 精选教程内容：创建MCP服务 -->
     <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-8 text-center">精选教程：MCP的安装与初始配置</h2>
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-8 text-center">精选教程：创建你的第一个MCP服务</h2>
             
             <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
                 <div class="p-6 md:p-8">
                     <div class="prose max-w-none">
                         <h3 class="text-xl font-bold mb-4">1. 准备工作</h3>
-                        <p class="mb-4">在安装MCP之前，确保你的服务器满足以下要求：</p>
+                        <p class="mb-4">在创建MCP服务之前，确保你的系统满足以下要求：</p>
                         <ul class="list-disc pl-6 mb-6 space-y-2">
-                            <li>操作系统：Windows 10/Server 2016或更高版本，或Linux发行版（推荐Ubuntu 20.04+）</li>
-                            <li>内存：至少4GB RAM（推荐8GB+）</li>
-                            <li>处理器：至少2核CPU</li>
-                            <li>磁盘空间：至少20GB可用空间</li>
-                            <li>已安装Java 8或更高版本</li>
-                            <li>稳定的网络连接</li>
+                            <li>操作系统：Linux、macOS或Windows</li>
+                            <li>Python：3.8或更高版本</li>
+                            <li>Git：用于克隆MCP仓库</li>
+                            <li>网络连接：用于下载依赖和连接外部数据源</li>
+                            <li>推荐安装：Docker（用于容器化部署）</li>
                         </ul>
 
-                        <h3 class="text-xl font-bold mb-4">2. 下载MCP</h3>
-                        <p class="mb-4">首先，访问MCP的官方网站或GitHub仓库下载最新版本的安装包：</p>
-                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># Linux系统使用wget下载
-wget https://github.com/MinecraftControlPanel/MCP/releases/download/v2.0.0/mcp-installer-linux.tar.gz
+                        <h3 class="text-xl font-bold mb-4">2. 安装MCP</h3>
+                        <p class="mb-4">首先，克隆Anthropic的MCP仓库并安装必要的依赖：</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># 克隆MCP仓库
+git clone https://github.com/anthropics/mcp.git
+cd mcp
 
-# 解压安装包
-tar -xzf mcp-installer-linux.tar.gz</code></pre>
+# 安装依赖
+pip install -e .
 
-                        <h3 class="text-xl font-bold mb-4">3. 安装MCP</h3>
-                        <p class="mb-4">解压后，运行安装脚本开始安装过程：</p>
-                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># 进入解压目录
-cd mcp-installer-linux
+# 安装开发依赖（可选）
+pip install -e "[dev]"
+</code></pre>
 
-# 运行安装脚本（Linux需要管理员权限）
-sudo ./install.sh
+                        <h3 class="text-xl font-bold mb-4">3. 创建基本的MCP服务</h3>
+                        <p class="mb-4">现在，让我们创建一个基本的MCP服务。首先创建一个新的Python文件，命名为<code>my_mcp_service.py</code>：</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>from mcp.server import MCPServer, MCPService
+from mcp.types import Message, Context
 
-# Windows系统直接双击install.bat文件</code></pre>
+# 创建一个自定义的MCP服务类
+class MyDataSource(MCPService):
+    def __init__(self):
+        super().__init__(name="my-data-source")
+        # 注册服务方法
+        self.register_method("query_data", self.query_data)
+        
+    async def query_data(self, context: Context, query: str) -> str:
+        """查询数据的方法"""
+        # 这里实现你的数据源查询逻辑
+        # 例如，从数据库、API或本地文件中获取数据
+        results = f"查询结果: {query}"
+        return results
 
-                        <h3 class="text-xl font-bold mb-4">4. 初始配置</h3>
-                        <p class="mb-4">安装完成后，需要进行初始配置。打开浏览器，访问以下地址：</p>
-                        <p class="mb-4 font-medium">http://服务器IP:8080</p>
-                        <p class="mb-4">首次访问时，你需要设置管理员账户和基本配置：</p>
+# 创建并启动MCP服务器
+def main():
+    # 创建服务器实例
+    server = MCPServer(
+        host="localhost",
+        port=8080,
+        # 可选的安全配置
+        tls_cert=None,  # 生产环境中应提供TLS证书
+        tls_key=None
+    )
+    
+    # 添加我们的服务
+    server.add_service(MyDataSource())
+    
+    # 启动服务器
+    print("MCP服务器启动在 http://localhost:8080")
+    server.start()
+
+if __name__ == "__main__":
+    main()</code></pre>
+
+                        <h3 class="text-xl font-bold mb-4">4. 配置MCP服务</h3>
+                        <p class="mb-4">为了使MCP服务更加安全和可靠，我们需要添加一些配置。创建一个配置文件<code>mcp_config.json</code>：</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>{
+  "host": "localhost",
+  "port": 8080,
+  "log_level": "INFO",
+  "cors_origins": ["*"],
+  "auth": {
+    "enabled": true,
+    "api_keys": ["your-api-key-here"]
+  },
+  "tls": {
+    "enabled": false,
+    "cert_path": "",
+    "key_path": ""
+  }
+}</code></pre>
+
+                        <p class="mb-4">然后修改我们的服务代码以使用这个配置文件：</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>import json
+from mcp.server import MCPServer, MCPService
+from mcp.types import Message, Context
+
+# 创建一个自定义的MCP服务类
+class MyDataSource(MCPService):
+    def __init__(self):
+        super().__init__(name="my-data-source")
+        # 注册服务方法
+        self.register_method("query_data", self.query_data)
+        
+    async def query_data(self, context: Context, query: str) -> str:
+        """查询数据的方法"""
+        # 这里实现你的数据源查询逻辑
+        results = f"查询结果: {query}"
+        return results
+
+# 创建并启动MCP服务器
+def main():
+    # 加载配置文件
+    with open("mcp_config.json", "r") as f:
+        config = json.load(f)
+    
+    # 创建服务器实例
+    server = MCPServer(
+        host=config["host"],
+        port=config["port"],
+        log_level=config["log_level"],
+        tls_cert=config["tls"]["cert_path"] if config["tls"]["enabled"] else None,
+        tls_key=config["tls"]["key_path"] if config["tls"]["enabled"] else None,
+        cors_origins=config["cors_origins"],
+        api_keys=config["auth"]["api_keys"] if config["auth"]["enabled"] else None
+    )
+    
+    # 添加我们的服务
+    server.add_service(MyDataSource())
+    
+    # 启动服务器
+    print(f"MCP服务器启动在 http://{config['host']}:{config['port']}")
+    server.start()
+
+if __name__ == "__main__":
+    main()</code></pre>
+
+                        <h3 class="text-xl font-bold mb-4">5. 测试MCP服务</h3>
+                        <p class="mb-4">现在，让我们创建一个简单的客户端来测试我们的MCP服务。创建一个名为<code>test_mcp_client.py</code>的文件：</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>import asyncio
+from mcp.client import MCPClient
+
+async def main():
+    # 创建MCP客户端
+    client = MCPClient(
+        server_url="http://localhost:8080",
+        api_key="your-api-key-here"  # 如果启用了认证
+    )
+    
+    try:
+        # 连接到服务器
+        await client.connect()
+        
+        # 调用服务方法
+        result = await client.call_service(
+            service_name="my-data-source",
+            method_name="query_data",
+            params={"query": "如何使用MCP协议？"}
+        )
+        
+        # 打印结果
+        print(f"服务返回结果: {result}")
+        
+    except Exception as e:
+        print(f"发生错误: {e}")
+    finally:
+        # 关闭连接
+        await client.disconnect()
+
+if __name__ == "__main__":
+    asyncio.run(main())</code></pre>
+
+                        <h3 class="text-xl font-bold mb-4">6. 运行MCP服务</h3>
+                        <p class="mb-4">现在，让我们运行我们的MCP服务并进行测试：</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># 启动MCP服务器
+python my_mcp_service.py
+
+# 在另一个终端中运行客户端测试
+python test_mcp_client.py</code></pre>
+
+                        <h3 class="text-xl font-bold mb-4">7. 部署MCP服务（使用Docker）</h3>
+                        <p class="mb-4">为了便于部署和扩展，我们可以使用Docker来容器化我们的MCP服务。首先创建一个<code>Dockerfile</code>：</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># 使用Python官方镜像作为基础镜像
+FROM python:3.10-slim
+
+# 设置工作目录
+WORKDIR /app
+
+# 复制项目文件到容器中
+COPY . .
+
+# 安装依赖
+RUN pip install --no-cache-dir -e .
+
+# 暴露端口
+EXPOSE 8080
+
+# 运行服务
+CMD ["python", "my_mcp_service.py"]</code></pre>
+
+                        <p class="mb-4">然后创建一个<code>docker-compose.yml</code>文件以简化部署：</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>version: '3'
+
+services:
+  mcp-service:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    environment:
+      - MCP_CONFIG=mcp_config.json
+    restart: unless-stopped</code></pre>
+
+                        <p class="mb-4">使用Docker Compose启动服务：</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>docker-compose up -d</code></pre>
+
+                        <h3 class="text-xl font-bold mb-4">8. 高级功能：添加流式响应</h3>
+                        <p class="mb-4">MCP支持流式响应，这对于处理大量数据或长时间运行的任务非常有用。让我们修改我们的服务以支持流式响应：</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>from mcp.server import MCPServer, MCPService
+from mcp.types import Message, Context, Stream
+
+# 创建一个支持流式响应的MCP服务类
+class MyStreamingDataSource(MCPService):
+    def __init__(self):
+        super().__init__(name="my-streaming-data-source")
+        # 注册服务方法
+        self.register_method("stream_data", self.stream_data)
+        
+    async def stream_data(self, context: Context, query: str) -> Stream[str]:
+        """流式返回数据的方法"""
+        # 模拟流式返回数据
+        for i in range(5):
+            # 生成部分结果
+            partial_result = f"部分结果 {i+1}: {query}"
+            # 使用yield返回流式数据
+            yield partial_result
+            # 模拟处理延迟
+            await asyncio.sleep(1)
+
+# 在main函数中添加这个服务
+# server.add_service(MyStreamingDataSource())</code></pre>
+
+                        <h3 class="text-xl font-bold mb-4">9. 监控与日志</h3>
+                        <p class="mb-4">为了确保MCP服务的稳定运行，我们需要添加监控和日志功能。MCP提供了内置的日志功能，我们可以通过配置文件调整日志级别：</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># 修改mcp_config.json中的log_level字段
+# 可选值: DEBUG, INFO, WARNING, ERROR, CRITICAL
+"log_level": "INFO"</code></pre>
+
+                        <h3 class="text-xl font-bold mb-4">10. 生产环境部署建议</h3>
+                        <p class="mb-4">在生产环境中部署MCP服务时，建议采取以下措施：</p>
                         <ol class="list-decimal pl-6 mb-6 space-y-2">
-                            <li>设置管理员用户名和密码</li>
-                            <li>配置数据库连接（默认使用内置SQLite，也可选择MySQL）</li>
-                            <li>设置服务器名称和描述</li>
-                            <li>配置网络设置（端口、域名等）</li>
+                            <li>启用TLS加密，使用有效的SSL证书</li>
+                            <li>配置API密钥认证，定期轮换密钥</li>
+                            <li>限制CORS源，只允许受信任的域名访问</li>
+                            <li>使用反向代理（如Nginx）来处理请求路由和负载均衡</li>
+                            <li>设置适当的资源限制（CPU、内存）</li>
+                            <li>配置日志聚合和监控系统</li>
+                            <li>实现自动备份和故障恢复机制</li>
                         </ol>
 
-                        <h3 class="text-xl font-bold mb-4">5. 添加你的第一个Minecraft服务器</h3>
-                        <p class="mb-4">配置完成后，你可以开始添加你的第一个Minecraft服务器：</p>
-                        <ol class="list-decimal pl-6 mb-6 space-y-2">
-                            <li>登录MCP控制面板</li>
-                            <li>点击左侧菜单的"服务器管理"</li>
-                            <li>点击"添加服务器"按钮</li>
-                            <li>填写服务器信息：名称、路径、Java参数等</li>
-                            <li>点击"保存"并启动服务器</li>
-                        </ol>
-
-                        <h3 class="text-xl font-bold mb-4">6. 配置防火墙</h3>
-                        <p class="mb-4">确保你的服务器防火墙已经开放了必要的端口：</p>
-                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># Linux系统（Ubuntu/Debian）
-sudo ufw allow 8080/tcp  # MCP控制面板端口
-sudo ufw allow 25565/tcp # Minecraft服务器默认端口
-sudo ufw reload</code></pre>
-
-                        <h3 class="text-xl font-bold mb-4">7. 完成安装</h3>
-                        <p>恭喜！你已经成功安装并配置了MCP。现在你可以通过浏览器访问控制面板，开始管理你的Minecraft服务器了。</p>
+                        <p>恭喜！你已经成功创建并部署了一个MCP服务。通过这个服务，你可以安全地将外部数据源与大语言模型集成，为你的AI应用提供更丰富的功能和数据支持。</p>
                     </div>
                 </div>
             </div>
@@ -274,33 +466,33 @@ sudo ufw reload</code></pre>
                 <!-- FAQ项目1 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden">
                     <button class="w-full px-6 py-4 text-left font-medium flex justify-between items-center focus:outline-none">
-                        <span>MCP支持哪些操作系统？</span>
+                        <span>MCP是什么？它的主要用途是什么？</span>
                         <i class="fa fa-chevron-down text-gray-500 transition-transform"></i>
                     </button>
                     <div class="px-6 py-4 text-gray-600 border-t border-gray-200">
-                        <p>MCP支持多种操作系统，包括Windows 10/Server 2016或更高版本，以及主流Linux发行版如Ubuntu、Debian、CentOS等。推荐使用Ubuntu 20.04或更高版本以获得最佳性能和兼容性。</p>
+                        <p>MCP（Model Context Protocol）是由Anthropic推出的开源协议，旨在实现大语言模型与外部数据源和工具的安全集成。它的主要用途是在大模型和外部系统之间建立一个安全、可靠的双向通信桥梁，使模型能够访问和操作外部数据和服务，同时保持安全性和隐私性。</p>
                     </div>
                 </div>
 
                 <!-- FAQ项目2 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden">
                     <button class="w-full px-6 py-4 text-left font-medium flex justify-between items-center focus:outline-none">
-                        <span>如何更新MCP到最新版本？</span>
+                        <span>MCP与其他API集成方式有什么区别？</span>
                         <i class="fa fa-chevron-down text-gray-500 transition-transform"></i>
                     </button>
                     <div class="px-6 py-4 text-gray-600 border-t border-gray-200">
-                        <p>更新MCP非常简单。在控制面板中，点击右上角的设置图标，然后选择"系统更新"。系统会检查并下载最新版本，完成后按照提示重启MCP服务即可。建议在更新前备份重要数据。</p>
+                        <p>与传统的API集成方式相比，MCP提供了更高级别的安全机制和更灵活的交互模式。它支持流式数据传输、上下文保留和丰富的类型系统，可以更好地满足大语言模型的特殊需求。此外，MCP还提供了标准化的错误处理和认证机制，使集成过程更加规范和可靠。</p>
                     </div>
                 </div>
 
                 <!-- FAQ项目3 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden">
                     <button class="w-full px-6 py-4 text-left font-medium flex justify-between items-center focus:outline-none">
-                        <span>我可以同时管理多少个Minecraft服务器？</span>
+                        <span>如何确保MCP服务的安全性？</span>
                         <i class="fa fa-chevron-down text-gray-500 transition-transform"></i>
                     </button>
                     <div class="px-6 py-4 text-gray-600 border-t border-gray-200">
-                        <p>MCP理论上可以同时管理无限多个Minecraft服务器，但实际数量取决于你的服务器硬件性能。每个服务器都会消耗一定的CPU、内存和磁盘资源。建议根据你的服务器配置合理规划服务器数量，以确保系统稳定运行。</p>
+                        <p>确保MCP服务安全的方法包括：启用TLS加密、配置API密钥认证、限制CORS源、使用防火墙限制访问、定期更新依赖库、实现访问日志和监控系统、定期轮换凭证和密钥，以及遵循最小权限原则设计服务权限。在生产环境中，建议使用反向代理和负载均衡器来增强安全性。</p>
                     </div>
                 </div>
             </div>
@@ -326,9 +518,9 @@ sudo ufw reload</code></pre>
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">关于MCP教程博客</h2>
-                <p class="text-gray-600 mb-8">我们致力于提供高质量的Minecraft服务器控制面板教程，帮助服务器管理员更轻松地管理和优化他们的服务器。</p>
+                <p class="text-gray-600 mb-8">我们致力于提供高质量的模型上下文协议(MCP)教程，帮助开发者更轻松地实现大语言模型与外部数据源的集成。</p>
                 <div class="flex justify-center space-x-6 mb-8">
-                    <a href="https://github.com/test-fshang" target="_blank" class="text-gray-600 hover:text-primary transition-colors">
+                    <a href="https://github.com/anthropics/mcp" target="_blank" class="text-gray-600 hover:text-primary transition-colors">
                         <i class="fa fa-github text-2xl"></i>
                     </a>
                     <a href="https://twitter.com" target="_blank" class="text-gray-600 hover:text-primary transition-colors">
@@ -344,7 +536,7 @@ sudo ufw reload</code></pre>
     </section>
 
     <!-- 返回顶部按钮 -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700 focus:outline-none">
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-indigo-700 focus:outline-none">
         <i class="fa fa-arrow-up"></i>
     </button>
 
