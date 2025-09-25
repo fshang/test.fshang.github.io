@@ -16,7 +16,7 @@ Minecraft服务器控制面板(MCP)是一个用于管理和监控Minecraft服务
 
 ## 访问方式
 
-博客地址：[https://test.fshang.github.io](https://test.fshang.github.io)
+博客地址：[https://fshang.github.io/test.fshang.github.io/](view now)
 
 ## 如何贡献
 
