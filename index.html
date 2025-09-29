@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCP教程博客 - 模型上下文协议完全指南</title>
+    <title>MCP Tutorial Blog - Guide to Model Context Protocol</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script>
@@ -11,10 +11,10 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#6366F1', // 靛蓝色，代表技术和创新
-                        secondary: '#10B981', // 绿色，代表进步和成功
-                        dark: '#1F2937', // 深色，代表专业和稳重
-                        light: '#F9FAFB', // 浅色，代表简洁和清晰
+                        primary: '#6366F1', // Indigo, representing technology and innovation
+                        secondary: '#10B981', // Green, representing progress and success
+                        dark: '#1F2937', // Dark color, representing professionalism and stability
+                        light: '#F9FAFB', // Light color, representing simplicity and clarity
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -42,24 +42,24 @@
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-    <!-- 导航栏 -->
+    <!-- Navigation Bar -->
     <header class="sticky top-0 z-50 bg-white shadow-sm">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="#" class="flex items-center space-x-2">
                 <i class="fa fa-plug text-primary text-2xl"></i>
-                <span class="font-bold text-xl text-dark" data-i18n="site-title">MCP教程</span>
+                <span class="font-bold text-xl text-dark" data-i18n="site-title">MCP Tutorial</span>
             </a>
             <div class="flex items-center gap-4">
-                <!-- 语言切换按钮 -->
+                <!-- Language Switch Button -->
                 <div class="flex border border-gray-200 rounded-lg overflow-hidden">
                     <button id="lang-zh" class="px-3 py-1 bg-primary text-white" onclick="changeLanguage('zh')">中文</button>
                     <button id="lang-en" class="px-3 py-1 bg-white text-gray-700" onclick="changeLanguage('en')">English</button>
                 </div>
                 <nav class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-primary transition-colors" data-i18n="nav-home">首页</a>
-                    <a href="#tutorials" class="text-gray-700 hover:text-primary transition-colors" data-i18n="nav-tutorials">教程</a>
-                    <a href="#faq" class="text-gray-700 hover:text-primary transition-colors" data-i18n="nav-faq">常见问题</a>
-                    <a href="#about" class="text-gray-700 hover:text-primary transition-colors" data-i18n="nav-about">关于</a>
+                    <a href="#home" class="text-gray-700 hover:text-primary transition-colors" data-i18n="nav-home">Home</a>
+                    <a href="#tutorials" class="text-gray-700 hover:text-primary transition-colors" data-i18n="nav-tutorials">Tutorials</a>
+                    <a href="#faq" class="text-gray-700 hover:text-primary transition-colors" data-i18n="nav-faq">FAQ</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition-colors" data-i18n="nav-about">About</a>
                 </nav>
                 <button class="md:hidden text-gray-700 focus:outline-none">
                     <i class="fa fa-bars text-xl"></i>
@@ -68,127 +68,127 @@
         </div>
     </header>
 
-    <!-- 英雄区 -->
+    <!-- Hero Section -->
     <section id="home" class="bg-gradient-to-r from-primary to-indigo-700 text-white py-16 md:py-24">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-4 text-shadow">
-                <span data-i18n="hero-title">模型上下文协议<br>MCP完全指南</span>
+                <span data-i18n="hero-title">Model Context Protocol<br>Complete Guide</span>
             </h1>
             <p class="text-[clamp(1rem,2vw,1.25rem)] max-w-2xl mx-auto mb-8 opacity-90">
-                <span data-i18n="hero-subtitle">从入门到精通，全面掌握Anthropic的MCP协议，实现大语言模型与外部数据源的安全集成</span>
+                <span data-i18n="hero-subtitle">From beginner to expert, master Anthropic's MCP protocol for secure integration between large language models and external data sources</span>
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#tutorials" class="bg-white text-primary font-medium py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-                    <span data-i18n="hero-start-learning">开始学习</span> <i class="fa fa-arrow-right ml-2"></i>
+                    <span data-i18n="hero-start-learning">Start Learning</span> <i class="fa fa-arrow-right ml-2"></i>
                 </a>
-                <a href="https://github.com/anthropics/mcp" target="_blank" class="bg-transparent border-2 border-white text-white font-medium py-3 px-6 rounded-lg hover:bg-white/10 transition-all">
-                    <i class="fa fa-github mr-2"></i> <span data-i18n="hero-official-repo">MCP官方仓库</span>
+                <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" class="bg-transparent border-2 border-white text-white font-medium py-3 px-6 rounded-lg hover:bg-white/10 transition-all">
+                    <i class="fa fa-a mr-2"></i> <span data-i18n="hero-official-repo">Introducing the MCP</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 主要教程内容 -->
+    <!-- Main Tutorial Content -->
     <section id="tutorials" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4" data-i18n="tutorials-title">MCP教程系列</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="tutorials-subtitle">详细的MCP安装、配置和使用指南，帮助你快速上手并掌握高级功能</p>
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4" data-i18n="tutorials-title">MCP Tutorial Series</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="tutorials-subtitle">Detailed guides for installing, configuring, and using MCP to help you get started quickly and master advanced features</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 教程卡片1 -->
+                <!-- Tutorial Card 1 -->
                 <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
                     <div class="h-48 bg-primary/10 flex items-center justify-center">
                         <i class="fa fa-download text-primary text-6xl"></i>
                     </div>
                     <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-semibold rounded-full mb-4" data-i18n="tutorial-basic">基础教程</span>
-                        <h3 class="text-xl font-bold mb-3" data-i18n="tutorial-install-title">MCP的安装与初始配置</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="tutorial-install-desc">学习如何下载、安装MCP，并进行基本配置，让你的模型上下文协议快速运行起来。</p>
+                        <span class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-semibold rounded-full mb-4" data-i18n="tutorial-basic">Basic Tutorial</span>
+                        <h3 class="text-xl font-bold mb-3" data-i18n="tutorial-install-title">MCP Installation and Initial Configuration</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="tutorial-install-desc">Learn how to download, install, and configure MCP to get your model context protocol up and running quickly.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> <span data-i18n="reading-time-15">15分钟阅读</span></span>
-                            <a href="#" class="text-primary font-medium hover:underline" data-i18n="read-more">继续阅读 →</a>
+                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> <span data-i18n="reading-time-15">15 min read</span></span>
+                            <a href="#" class="text-primary font-medium hover:underline" data-i18n="read-more">Read more →</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- 教程卡片2 -->
+                <!-- Tutorial Card 2 -->
                 <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
                     <div class="h-48 bg-secondary/10 flex items-center justify-center">
                         <i class="fa fa-server text-secondary text-6xl"></i>
                     </div>
                     <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-green-100 text-secondary text-xs font-semibold rounded-full mb-4" data-i18n="tutorial-core">核心教程</span>
-                        <h3 class="text-xl font-bold mb-3" data-i18n="tutorial-create-title">创建你的第一个MCP服务</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="tutorial-create-desc">详细讲解如何创建和部署一个MCP服务，实现大模型与外部数据源的安全连接。</p>
+                        <span class="inline-block px-3 py-1 bg-green-100 text-secondary text-xs font-semibold rounded-full mb-4" data-i18n="tutorial-core">Core Tutorial</span>
+                        <h3 class="text-xl font-bold mb-3" data-i18n="tutorial-create-title">Creating Your First MCP Service</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="tutorial-create-desc">Detailed explanation of how to create and deploy an MCP service to enable secure connections between large models and external data sources.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> <span data-i18n="reading-time-25">25分钟阅读</span></span>
-                            <a href="#" class="text-secondary font-medium hover:underline" data-i18n="read-more">继续阅读 →</a>
+                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> <span data-i18n="reading-time-25">25 min read</span></span>
+                            <a href="#" class="text-secondary font-medium hover:underline" data-i18n="read-more">Read more →</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- 教程卡片3 -->
+                <!-- Tutorial Card 3 -->
                 <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
                     <div class="h-48 bg-purple-100 flex items-center justify-center">
                         <i class="fa fa-cog text-purple-600 text-6xl"></i>
                     </div>
                     <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-purple-100 text-purple-600 text-xs font-semibold rounded-full mb-4" data-i18n="tutorial-advanced">进阶教程</span>
-                        <h3 class="text-xl font-bold mb-3" data-i18n="tutorial-advanced-title">MCP高级功能与安全</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="tutorial-advanced-desc">深入了解MCP的高级功能，包括安全机制、权限控制和性能优化。</p>
+                        <span class="inline-block px-3 py-1 bg-purple-100 text-purple-600 text-xs font-semibold rounded-full mb-4" data-i18n="tutorial-advanced">Advanced Tutorial</span>
+                        <h3 class="text-xl font-bold mb-3" data-i18n="tutorial-advanced-title">MCP Advanced Features and Security</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="tutorial-advanced-desc">Deep dive into MCP's advanced features including security mechanisms, access control, and performance optimization.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> <span data-i18n="reading-time-20">20分钟阅读</span></span>
-                            <a href="#" class="text-purple-600 font-medium hover:underline" data-i18n="read-more">继续阅读 →</a>
+                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> <span data-i18n="reading-time-20">20 min read</span></span>
+                            <a href="#" class="text-purple-600 font-medium hover:underline" data-i18n="read-more">Read more →</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- 教程卡片4 -->
+                <!-- Tutorial Card 4 -->
                 <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
                     <div class="h-48 bg-red-100 flex items-center justify-center">
                         <i class="fa fa-bug text-red-500 text-6xl"></i>
                     </div>
                     <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-red-100 text-red-500 text-xs font-semibold rounded-full mb-4" data-i18n="troubleshooting">故障排除</span>
-                        <h3 class="text-xl font-bold mb-3" data-i18n="tutorial-troubleshoot-title">MCP常见问题与解决方案</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="tutorial-troubleshoot-desc">解决在使用MCP过程中可能遇到的各种问题，包括连接失败、安全配置错误等。</p>
+                        <span class="inline-block px-3 py-1 bg-red-100 text-red-500 text-xs font-semibold rounded-full mb-4" data-i18n="troubleshooting">Troubleshooting</span>
+                        <h3 class="text-xl font-bold mb-3" data-i18n="tutorial-troubleshoot-title">MCP Common Issues and Solutions</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="tutorial-troubleshoot-desc">Solve various issues you may encounter when using MCP, including connection failures, security configuration errors, and more.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> <span data-i18n="reading-time-30">30分钟阅读</span></span>
-                            <a href="#" class="text-red-500 font-medium hover:underline" data-i18n="read-more">继续阅读 →</a>
+                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> <span data-i18n="reading-time-30">30 min read</span></span>
+                            <a href="#" class="text-red-500 font-medium hover:underline" data-i18n="read-more">Read more →</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- 教程卡片5 -->
+                <!-- Tutorial Card 5 -->
                 <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
                     <div class="h-48 bg-blue-100 flex items-center justify-center">
                         <i class="fa fa-code text-blue-600 text-6xl"></i>
                     </div>
                     <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-xs font-semibold rounded-full mb-4" data-i18n="dev-tutorial">开发教程</span>
-                        <h3 class="text-xl font-bold mb-3" data-i18n="tutorial-client-title">MCP客户端开发指南</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="tutorial-client-desc">学习如何开发MCP客户端，实现与大语言模型的无缝集成。</p>
+                        <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-xs font-semibold rounded-full mb-4" data-i18n="dev-tutorial">Development Tutorial</span>
+                        <h3 class="text-xl font-bold mb-3" data-i18n="tutorial-client-title">MCP Client Development Guide</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="tutorial-client-desc">Learn how to develop MCP clients for seamless integration with large language models.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> <span data-i18n="reading-time-40">40分钟阅读</span></span>
-                            <a href="#" class="text-blue-600 font-medium hover:underline" data-i18n="read-more">继续阅读 →</a>
+                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> <span data-i18n="reading-time-40">40 min read</span></span>
+                            <a href="#" class="text-blue-600 font-medium hover:underline" data-i18n="read-more">Read more →</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- 教程卡片6 -->
+                <!-- Tutorial Card 6 -->
                 <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
                     <div class="h-48 bg-yellow-100 flex items-center justify-center">
                         <i class="fa fa-lightbulb-o text-yellow-600 text-6xl"></i>
                     </div>
                     <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-semibold rounded-full mb-4" data-i18n="case-studies">应用案例</span>
-                        <h3 class="text-xl font-bold mb-3" data-i18n="tutorial-case-title">MCP实战案例解析</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="tutorial-case-desc">分析真实世界中的MCP应用案例，了解如何在实际项目中应用MCP协议。</p>
+                        <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-semibold rounded-full mb-4" data-i18n="case-studies">Case Studies</span>
+                        <h3 class="text-xl font-bold mb-3" data-i18n="tutorial-case-title">MCP Practical Case Analysis</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="tutorial-case-desc">Analyze real-world MCP application cases to understand how to apply the MCP protocol in actual projects.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> <span data-i18n="reading-time-25">25分钟阅读</span></span>
-                            <a href="#" class="text-yellow-600 font-medium hover:underline" data-i18n="read-more">继续阅读 →</a>
+                            <span class="text-gray-500 text-sm"><i class="fa fa-clock-o mr-1"></i> <span data-i18n="reading-time-25">25 min read</span></span>
+                            <a href="#" class="text-yellow-600 font-medium hover:underline" data-i18n="read-more">Read more →</a>
                         </div>
                     </div>
                 </article>
@@ -196,337 +196,155 @@
         </div>
     </section>
 
-    <!-- 精选教程内容：创建MCP服务 -->
+    <!-- Featured Tutorial: Creating MCP Service -->
     <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-8 text-center" data-i18n="featured-tutorial-title">精选教程：创建你的第一个MCP服务</h2>
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-8 text-center" data-i18n="featured-tutorial-title">Featured Tutorial: Creating Your First MCP Service</h2>
             
             <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
                 <div class="p-6 md:p-8">
                     <div class="prose max-w-none">
-                        <h3 class="text-xl font-bold mb-4" data-i18n="prepare-work">1. 准备工作</h3>
-                        <p class="mb-4" data-i18n="before-creating">在创建MCP服务之前，确保你的系统满足以下要求：</p>
+                        <h3 class="text-xl font-bold mb-4" data-i18n="prepare-work">1. Preparation</h3>
+                        <p class="mb-4" data-i18n="before-creating">Before creating an MCP service, ensure your system meets the following requirements:</p>
                         <ul class="list-disc pl-6 mb-6 space-y-2">
-                            <li data-i18n="req-os">操作系统：Linux、macOS或Windows</li>
-                            <li data-i18n="req-python">Python：3.8或更高版本</li>
-                            <li data-i18n="req-git">Git：用于克隆MCP仓库</li>
-                            <li data-i18n="req-network">网络连接：用于下载依赖和连接外部数据源</li>
-                            <li data-i18n="req-docker">推荐安装：Docker（用于容器化部署）</li>
+                            <li data-i18n="req-os">Operating System: Linux, macOS, or Windows</li>
+                            <li data-i18n="req-python">Python：3.10或更高版本',
+                            'req-network': '网络连接：用于下载依赖和连接外部数据源',
+                            <li data-i18n="req-git">Git</li>
+                            <li data-i18n="req-network">Network connection: for downloading dependencies and connecting to external data sources</li>
+                            <li data-i18n="req-docker">Recommended: Docker (for containerized deployment)</li>
                         </ul>
 
-                        <h3 class="text-xl font-bold mb-4" data-i18n="install-mcp">2. 安装MCP</h3>
-                        <p class="mb-4" data-i18n="install-steps">首先，克隆Anthropic的MCP仓库并安装必要的依赖：</p>
-                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># 克隆MCP仓库
-git clone https://github.com/anthropics/mcp.git
-cd mcp
+                        <h3 class="text-xl font-bold mb-4" data-i18n="install-mcp">2. Installing MCP</h3>
+                        <p class="mb-4" data-i18n="install-steps">First, install the MCP package using pip:</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># Install MCP package
+pip install mcp
 
-# 安装依赖
-pip install -e .
-
-# 安装开发依赖（可选）
-pip install -e "[dev]"
+# Install development dependencies (optional)
+pip install "mcp[cli]"
 </code></pre>
 
-                        <h3 class="text-xl font-bold mb-4" data-i18n="create-basic-service">3. 创建基本的MCP服务</h3>
-                        <p class="mb-4" data-i18n="create-service-intro">现在，让我们创建一个基本的MCP服务。首先创建一个新的Python文件，命名为<code>my_mcp_service.py</code>：</p>
-                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>from mcp.server import MCPServer, MCPService
-from mcp.types import Message, Context
+                        <h3 class="text-xl font-bold mb-4" data-i18n="create-basic-service">3. Creating a Basic MCP Service</h3>
+                        <p class="mb-4" data-i18n="create-service-intro">Now, let's create a basic MCP service. First, create a new Python file called <code>my_mcp_service.py</code>:</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>from mcp.server.fastmcp import FastMCP
 
-# 创建一个自定义的MCP服务类
-class MyDataSource(MCPService):
-    def __init__(self):
-        super().__init__(name="my-data-source")
-        # 注册服务方法
-        self.register_method("query_data", self.query_data)
-        
-    async def query_data(self, context: Context, query: str) -> str:
-        """查询数据的方法"""
-        # 这里实现你的数据源查询逻辑
-        # 例如，从数据库、API或本地文件中获取数据
-        results = f"查询结果: {query}"
-        return results
+# Create an MCP server
+mcp = FastMCP("Demo")
 
-# 创建并启动MCP服务器
-def main():
-    # 创建服务器实例
-    server = MCPServer(
-        host="localhost",
-        port=8080,
-        # 可选的安全配置
-        tls_cert=None,  # 生产环境中应提供TLS证书
-        tls_key=None
-    )
-    
-    # 添加我们的服务
-    server.add_service(MyDataSource())
-    
-    # 启动服务器
-    print("MCP服务器启动在 http://localhost:8080")
-    server.start()
 
-if __name__ == "__main__":
-    main()</code></pre>
+# Add an addition tool
+@mcp.tool()
+def add(a: int, b: int) -> int:
+    """Add two numbers"""
+    return a + b
 
-                        <h3 class="text-xl font-bold mb-4" data-i18n="configure-mcp">4. 配置MCP服务</h3>
-                        <p class="mb-4" data-i18n="configure-intro">为了使MCP服务更加安全和可靠，我们需要添加一些配置。创建一个配置文件<code>mcp_config.json</code>：</p>
+
+# Add a dynamic greeting resource
+@mcp.resource("greeting://{name}")
+def get_greeting(name: str) -> str:
+    """Get a personalized greeting"""
+    return f"Hello, {name}!"
+
+
+# Add a prompt
+@mcp.prompt()
+def greet_user(name: str, style: str = "friendly") -> str:
+    """Generate a greeting prompt"""
+    styles = {
+        "friendly": "Please write a warm, friendly greeting",
+        "formal": "Please write a formal, professional greeting",
+        "casual": "Please write a casual, relaxed greeting",
+    }
+
+    return f"{styles.get(style, styles['friendly'])} for someone named {name}."</code></pre>
+
+                        <h3 class="text-xl font-bold mb-4" data-i18n="configure-mcp">4. start MCP Service</h3>
+                        <p class="mb-4" data-i18n="configure-intro">To make your MCP service more secure and reliable, we need to add some configuration. Create a configuration file called <code>mcp_config.json</code>:</p>
                         <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>{
-  "host": "localhost",
-  "port": 8080,
-  "log_level": "INFO",
-  "cors_origins": ["*"],
-  "auth": {
-    "enabled": true,
-    "api_keys": ["your-api-key-here"]
-  },
-  "tls": {
-    "enabled": false,
-    "cert_path": "",
-    "key_path": ""
+  "Demo": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@upstash/context7-mcp"
+    ],
+    "env": {},
+    "working_directory": null
   }
 }</code></pre>
 
-                        <p class="mb-4" data-i18n="use-config">然后修改我们的服务代码以使用这个配置文件：</p>
-                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>import json
-from mcp.server import MCPServer, MCPService
-from mcp.types import Message, Context
+                        
 
-# 创建一个自定义的MCP服务类
-class MyDataSource(MCPService):
-    def __init__(self):
-        super().__init__(name="my-data-source")
-        # 注册服务方法
-        self.register_method("query_data", self.query_data)
-        
-    async def query_data(self, context: Context, query: str) -> str:
-        """查询数据的方法"""
-        # 这里实现你的数据源查询逻辑
-        results = f"查询结果: {query}"
-        return results
-
-# 创建并启动MCP服务器
-def main():
-    # 加载配置文件
-    with open("mcp_config.json", "r") as f:
-        config = json.load(f)
-    
-    # 创建服务器实例
-    server = MCPServer(
-        host=config["host"],
-        port=config["port"],
-        log_level=config["log_level"],
-        tls_cert=config["tls"]["cert_path"] if config["tls"]["enabled"] else None,
-        tls_key=config["tls"]["key_path"] if config["tls"]["enabled"] else None,
-        cors_origins=config["cors_origins"],
-        api_keys=config["auth"]["api_keys"] if config["auth"]["enabled"] else None
-    )
-    
-    # 添加我们的服务
-    server.add_service(MyDataSource())
-    
-    # 启动服务器
-    print(f"MCP服务器启动在 http://{config['host']}:{config['port']}")
-    server.start()
-
-if __name__ == "__main__":
-    main()</code></pre>
-
-                        <h3 class="text-xl font-bold mb-4" data-i18n="test-mcp">5. 测试MCP服务</h3>
-                        <p class="mb-4" data-i18n="test-intro">现在，让我们创建一个简单的客户端来测试我们的MCP服务。创建一个名为<code>test_mcp_client.py</code>的文件：</p>
-                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>import asyncio
-from mcp.client import MCPClient
-
-async def main():
-    # 创建MCP客户端
-    client = MCPClient(
-        server_url="http://localhost:8080",
-        api_key="your-api-key-here"  # 如果启用了认证
-    )
-    
-    try:
-        # 连接到服务器
-        await client.connect()
-        
-        # 调用服务方法
-        result = await client.call_service(
-            service_name="my-data-source",
-            method_name="query_data",
-            params={"query": "如何使用MCP协议？"}
-        )
-        
-        # 打印结果
-        print(f"服务返回结果: {result}")
-        
-    except Exception as e:
-        print(f"发生错误: {e}")
-    finally:
-        # 关闭连接
-        await client.disconnect()
-
-if __name__ == "__main__":
-    asyncio.run(main())</code></pre>
-
-                        <h3 class="text-xl font-bold mb-4" data-i18n="run-mcp">6. 运行MCP服务</h3>
-                        <p class="mb-4" data-i18n="run-intro">现在，让我们运行我们的MCP服务并进行测试：</p>
-                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># 启动MCP服务器
-python my_mcp_service.py
-
-# 在另一个终端中运行客户端测试
-python test_mcp_client.py</code></pre>
-
-                        <h3 class="text-xl font-bold mb-4" data-i18n="deploy-mcp">7. 部署MCP服务（使用Docker）</h3>
-                        <p class="mb-4" data-i18n="deploy-intro">为了便于部署和扩展，我们可以使用Docker来容器化我们的MCP服务。首先创建一个<code>Dockerfile</code>：</p>
-                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># 使用Python官方镜像作为基础镜像
-FROM python:3.10-slim
-
-# 设置工作目录
-WORKDIR /app
-
-# 复制项目文件到容器中
-COPY . .
-
-# 安装依赖
-RUN pip install --no-cache-dir -e .
-
-# 暴露端口
-EXPOSE 8080
-
-# 运行服务
-CMD ["python", "my_mcp_service.py"]</code></pre>
-
-                        <p class="mb-4" data-i18n="docker-compose">然后创建一个<code>docker-compose.yml</code>文件以简化部署：</p>
-                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>version: '3'
-
-services:
-  mcp-service:
-    build: .
-    ports:
-      - "8080:8080"
-    volumes:
-      - .:/app
-    environment:
-      - MCP_CONFIG=mcp_config.json
-    restart: unless-stopped</code></pre>
-
-                        <p class="mb-4" data-i18n="start-with-docker">使用Docker Compose启动服务：</p>
-                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>docker-compose up -d</code></pre>
-
-                        <h3 class="text-xl font-bold mb-4" data-i18n="advanced-features">8. 高级功能：添加流式响应</h3>
-                        <p class="mb-4" data-i18n="streaming-intro">MCP支持流式响应，这对于处理大量数据或长时间运行的任务非常有用。让我们修改我们的服务以支持流式响应：</p>
-                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code>from mcp.server import MCPServer, MCPService
-from mcp.types import Message, Context, Stream
-import asyncio
-
-# 创建一个支持流式响应的MCP服务类
-class MyStreamingDataSource(MCPService):
-    def __init__(self):
-        super().__init__(name="my-streaming-data-source")
-        # 注册服务方法
-        self.register_method("stream_data", self.stream_data)
-        
-    async def stream_data(self, context: Context, query: str) -> Stream[str]:
-        """流式返回数据的方法"""
-        # 模拟流式返回数据
-        for i in range(5):
-            # 生成部分结果
-            partial_result = f"部分结果 {i+1}: {query}"
-            # 使用yield返回流式数据
-            yield partial_result
-            # 模拟处理延迟
-            await asyncio.sleep(1)
-
-# 在main函数中添加这个服务
-# server.add_service(MyStreamingDataSource())</code></pre>
-
-                        <h3 class="text-xl font-bold mb-4" data-i18n="monitoring">9. 监控与日志</h3>
-                        <p class="mb-4" data-i18n="monitoring-intro">为了确保MCP服务的稳定运行，我们需要添加监控和日志功能。MCP提供了内置的日志功能，我们可以通过配置文件调整日志级别：</p>
-                        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-6"><code># 修改mcp_config.json中的log_level字段
-# 可选值: DEBUG, INFO, WARNING, ERROR, CRITICAL
-"log_level": "INFO"</code></pre>
-
-                        <h3 class="text-xl font-bold mb-4" data-i18n="prod-deployment">10. 生产环境部署建议</h3>
-                        <p class="mb-4" data-i18n="prod-intro">在生产环境中部署MCP服务时，建议采取以下措施：</p>
-                        <ol class="list-decimal pl-6 mb-6 space-y-2">
-                            <li data-i18n="prod-tls">启用TLS加密，使用有效的SSL证书</li>
-                            <li data-i18n="prod-auth">配置API密钥认证，定期轮换密钥</li>
-                            <li data-i18n="prod-cors">限制CORS源，只允许受信任的域名访问</li>
-                            <li data-i18n="prod-proxy">使用反向代理（如Nginx）来处理请求路由和负载均衡</li>
-                            <li data-i18n="prod-resources">设置适当的资源限制（CPU、内存）</li>
-                            <li data-i18n="prod-logging">配置日志聚合和监控系统</li>
-                            <li data-i18n="prod-backup">实现自动备份和故障恢复机制</li>
-                        </ol>
-
-                        <p data-i18n="congrats">恭喜！你已经成功创建并部署了一个MCP服务。通过这个服务，你可以安全地将外部数据源与大语言模型集成，为你的AI应用提供更丰富的功能和数据支持。</p>
+                        <p data-i18n="congrats">Congratulations! You have successfully created and deployed an MCP service. Through this service, you can securely integrate external data sources with large language models, providing richer functionality and data support for your AI applications.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 常见问题 -->
+    <!-- FAQ Section -->
     <section id="faq" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4" data-i18n="faq-title">常见问题</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="faq-subtitle">解答在使用MCP过程中可能遇到的常见问题</p>
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4" data-i18n="faq-title">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="faq-subtitle">Answers to common questions you may encounter when using MCP</p>
             </div>
 
             <div class="max-w-3xl mx-auto space-y-4">
-                <!-- FAQ项目1 -->
+                <!-- FAQ Item 1 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden">
                     <button class="w-full px-6 py-4 text-left font-medium flex justify-between items-center focus:outline-none">
-                        <span data-i18n="faq-question1">MCP是什么？它的主要用途是什么？</span>
+                        <span data-i18n="faq-question1">What is MCP and what is its main purpose?</span>
                         <i class="fa fa-chevron-down text-gray-500 transition-transform"></i>
                     </button>
                     <div class="px-6 py-4 text-gray-600 border-t border-gray-200">
-                        <p data-i18n="faq-answer1">MCP（Model Context Protocol）是由Anthropic推出的开源协议，旨在实现大语言模型与外部数据源和工具的安全集成。它的主要用途是在大模型和外部系统之间建立一个安全、可靠的双向通信桥梁，使模型能够访问和操作外部数据和服务，同时保持安全性和隐私性。</p>
+                        <p data-i18n="faq-answer1">MCP (Model Context Protocol) is an open-source protocol for secure integration between large language models and external data sources and tools. Its main purpose is to establish a secure, reliable two-way communication bridge between large models and external systems, enabling models to access and operate external data and services while maintaining security and privacy.',
                     </div>
                 </div>
 
-                <!-- FAQ项目2 -->
+                <!-- FAQ Item 2 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden">
                     <button class="w-full px-6 py-4 text-left font-medium flex justify-between items-center focus:outline-none">
-                        <span data-i18n="faq-question2">MCP与其他API集成方式有什么区别？</span>
+                        <span data-i18n="faq-question2">How does MCP differ from other API integration methods?</span>
                         <i class="fa fa-chevron-down text-gray-500 transition-transform"></i>
                     </button>
                     <div class="px-6 py-4 text-gray-600 border-t border-gray-200">
-                        <p data-i18n="faq-answer2">与传统的API集成方式相比，MCP提供了更高级别的安全机制和更灵活的交互模式。它支持流式数据传输、上下文保留和丰富的类型系统，可以更好地满足大语言模型的特殊需求。此外，MCP还提供了标准化的错误处理和认证机制，使集成过程更加规范和可靠。</p>
+                        <p data-i18n="faq-answer2">Compared to traditional API integration methods, MCP provides higher-level security mechanisms and more flexible interaction patterns. It supports streaming data transmission, context preservation, and a rich type system, which can better meet the special needs of large language models. Additionally, MCP provides standardized error handling and authentication mechanisms, making the integration process more standardized and reliable.</p>
                     </div>
                 </div>
 
-                <!-- FAQ项目3 -->
+                <!-- FAQ Item 3 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden">
                     <button class="w-full px-6 py-4 text-left font-medium flex justify-between items-center focus:outline-none">
-                        <span data-i18n="faq-question3">如何确保MCP服务的安全性？</span>
+                        <span data-i18n="faq-question3">How to ensure the security of MCP services?</span>
                         <i class="fa fa-chevron-down text-gray-500 transition-transform"></i>
                     </button>
                     <div class="px-6 py-4 text-gray-600 border-t border-gray-200">
-                        <p data-i18n="faq-answer3">确保MCP服务安全的方法包括：启用TLS加密、配置API密钥认证、限制CORS源、使用防火墙限制访问、定期更新依赖库、实现访问日志和监控系统、定期轮换凭证和密钥，以及遵循最小权限原则设计服务权限。在生产环境中，建议使用反向代理和负载均衡器来增强安全性。</p>
+                        <p data-i18n="faq-answer3">Methods to ensure the security of MCP services include: enabling TLS encryption, configuring API key authentication, restricting CORS origins, using firewalls to limit access, regularly updating dependency libraries, implementing access logs and monitoring systems, regularly rotating credentials and keys, and designing service permissions according to the principle of least privilege. In production environments, it is recommended to use reverse proxies and load balancers to enhance security.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 订阅区域 -->
+    <!-- Subscription Section -->
     <section class="py-16 bg-primary text-white">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4" data-i18n="subscribe-title">获取最新MCP教程和更新</h2>
-            <p class="text-white/80 max-w-2xl mx-auto mb-8" data-i18n="subscribe-subtitle">订阅我们的电子邮件，第一时间获取MCP的最新教程、更新和技巧</p>
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4" data-i18n="subscribe-title">Get the Latest MCP Tutorials and Updates</h2>
+            <p class="text-white/80 max-w-2xl mx-auto mb-8" data-i18n="subscribe-subtitle">Subscribe to our email to get the latest MCP tutorials, updates, and tips first</p>
             <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
-                <input type="email" placeholder="输入你的邮箱地址" class="flex-1 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white text-gray-800" data-i18n-placeholder="email-placeholder">
+                <input type="email" placeholder="Enter your email address" class="flex-1 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white text-gray-800" data-i18n-placeholder="email-placeholder">
                 <button type="submit" class="bg-white text-primary font-medium py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition-colors">
-                    <span data-i18n="subscribe-btn">订阅</span> <i class="fa fa-paper-plane ml-2"></i>
+                    <span data-i18n="subscribe-btn">Subscribe</span> <i class="fa fa-paper-plane ml-2"></i>
                 </button>
             </form>
-        </div>
     </section>
 
-    <!-- 关于我们 -->
+    <!-- About Us -->
     <section id="about" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4" data-i18n="about-title">关于MCP教程博客</h2>
-                <p class="text-gray-600 mb-8" data-i18n="about-desc">我们致力于提供高质量的模型上下文协议(MCP)教程，帮助开发者更轻松地实现大语言模型与外部数据源的集成。</p>
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4" data-i18n="about-title">About MCP Tutorial Blog</h2>
+                <p class="text-gray-600 mb-8" data-i18n="about-desc">We are committed to providing high-quality Model Context Protocol (MCP) tutorials to help developers more easily implement the integration of large language models with external data sources.</p>
                 <div class="flex justify-center space-x-6 mb-8">
                     <a href="https://github.com/anthropics/mcp" target="_blank" class="text-gray-600 hover:text-primary transition-colors">
                         <i class="fa fa-github text-2xl"></i>
@@ -538,19 +356,19 @@ class MyStreamingDataSource(MCPService):
                         <i class="fa fa-discord text-2xl"></i>
                     </a>
                 </div>
-                <p class="text-gray-500 text-sm" data-i18n="copyright">© 2023 MCP教程博客. 保留所有权利。</p>
+                <!-- <p class="text-gray-500 text-sm" data-i18n="copyright">© 2023 MCP Tutorial Blog. All rights reserved.</p> -->
             </div>
         </div>
     </section>
 
-    <!-- 返回顶部按钮 -->
+    <!-- Back to Top Button -->
     <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-indigo-700 focus:outline-none">
         <i class="fa fa-arrow-up"></i>
     </button>
 
     <!-- JavaScript -->
     <script>
-        // 多语言支持
+        // Multi-language Support
         const translations = {
             'zh': {
                 'site-title': 'MCP教程',
@@ -561,7 +379,7 @@ class MyStreamingDataSource(MCPService):
                 'hero-title': '模型上下文协议<br>MCP完全指南',
                 'hero-subtitle': '从入门到精通，全面掌握Anthropic的MCP协议，实现大语言模型与外部数据源的安全集成',
                 'hero-start-learning': '开始学习',
-                'hero-official-repo': 'MCP官方仓库',
+                'hero-official-repo': 'MCP介绍',
                 'tutorials-title': 'MCP教程系列',
                 'tutorials-subtitle': '详细的MCP安装、配置和使用指南，帮助你快速上手并掌握高级功能',
                 'tutorial-basic': '基础教程',
@@ -592,12 +410,12 @@ class MyStreamingDataSource(MCPService):
                 'prepare-work': '1. 准备工作',
                 'before-creating': '在创建MCP服务之前，确保你的系统满足以下要求：',
                 'req-os': '操作系统：Linux、macOS或Windows',
-                'req-python': 'Python：3.8或更高版本',
-                'req-git': 'Git：用于克隆MCP仓库',
+                'req-python': 'Python：3.10或更高版本',
+                'req-git': 'Git',
                 'req-network': '网络连接：用于下载依赖和连接外部数据源',
                 'req-docker': '推荐安装：Docker（用于容器化部署）',
                 'install-mcp': '2. 安装MCP',
-                'install-steps': '首先，克隆Anthropic的MCP仓库并安装必要的依赖：',
+                'install-steps': '首先，安装必要的依赖：',
                 'create-basic-service': '3. 创建基本的MCP服务',
                 'create-service-intro': '现在，让我们创建一个基本的MCP服务。首先创建一个新的Python文件，命名为<code>my_mcp_service.py</code>：',
                 'configure-mcp': '4. 配置MCP服务',
@@ -650,7 +468,7 @@ class MyStreamingDataSource(MCPService):
                 'hero-title': 'Model Context Protocol<br>Complete Guide',
                 'hero-subtitle': 'From beginner to expert, master Anthropic\'s MCP protocol for secure integration between large language models and external data sources',
                 'hero-start-learning': 'Start Learning',
-                'hero-official-repo': 'Official MCP Repo',
+                'hero-official-repo': 'Introducing the MCP',
                 'tutorials-title': 'MCP Tutorial Series',
                 'tutorials-subtitle': 'Detailed guides for installing, configuring, and using MCP to help you get started quickly and master advanced features',
                 'tutorial-basic': 'Basic Tutorial',
@@ -681,12 +499,12 @@ class MyStreamingDataSource(MCPService):
                 'prepare-work': '1. Preparation',
                 'before-creating': 'Before creating an MCP service, ensure your system meets the following requirements:',
                 'req-os': 'Operating System: Linux, macOS, or Windows',
-                'req-python': 'Python: version 3.8 or higher',
-                'req-git': 'Git: for cloning the MCP repository',
+                'req-python': 'Python: version 3.10 or higher',
+                'req-git': 'Git',
                 'req-network': 'Network connection: for downloading dependencies and connecting to external data sources',
                 'req-docker': 'Recommended: Docker (for containerized deployment)',
                 'install-mcp': '2. Installing MCP',
-                'install-steps': 'First, clone Anthropic\'s MCP repository and install the necessary dependencies:',
+                'install-steps': 'First, install the necessary dependencies:',
                 'create-basic-service': '3. Creating a Basic MCP Service',
                 'create-service-intro': 'Now, let\'s create a basic MCP service. First, create a new Python file called <code>my_mcp_service.py</code>:',
                 'configure-mcp': '4. Configuring MCP Service',
@@ -717,7 +535,7 @@ class MyStreamingDataSource(MCPService):
                 'faq-title': 'Frequently Asked Questions',
                 'faq-subtitle': 'Answers to common questions you may encounter when using MCP',
                 'faq-question1': 'What is MCP and what is its main purpose?',
-                'faq-answer1': 'MCP (Model Context Protocol) is an open-source protocol introduced by Anthropic for secure integration between large language models and external data sources and tools. Its main purpose is to establish a secure, reliable two-way communication bridge between large models and external systems, enabling models to access and operate external data and services while maintaining security and privacy.',
+                'faq-answer1': 'MCP (Model Context Protocol) is an open-source protocol for secure integration between large language models and external data sources and tools. Its main purpose is to establish a secure, reliable two-way communication bridge between large models and external systems, enabling models to access and operate external data and services while maintaining security and privacy.',
                 'faq-question2': 'How does MCP differ from other API integration methods?',
                 'faq-answer2': 'Compared to traditional API integration methods, MCP provides higher-level security mechanisms and more flexible interaction patterns. It supports streaming data transmission, context preservation, and a rich type system, which can better meet the special needs of large language models. Additionally, MCP provides standardized error handling and authentication mechanisms, making the integration process more standardized and reliable.',
                 'faq-question3': 'How to ensure the security of MCP services?',
@@ -732,9 +550,9 @@ class MyStreamingDataSource(MCPService):
             }
         };
 
-        // 切换语言的函数
+        // Function to switch language
         function changeLanguage(lang) {
-            // 更新语言按钮状态
+            // Update language button status
             document.getElementById('lang-zh').classList.remove('bg-primary', 'text-white');
             document.getElementById('lang-zh').classList.add('bg-white', 'text-gray-700');
             document.getElementById('lang-en').classList.remove('bg-primary', 'text-white');
@@ -742,7 +560,7 @@ class MyStreamingDataSource(MCPService):
             document.getElementById(`lang-${lang}`).classList.remove('bg-white', 'text-gray-700');
             document.getElementById(`lang-${lang}`).classList.add('bg-primary', 'text-white');
 
-            // 更新页面内容
+            // Update page content
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang][key]) {
@@ -750,7 +568,7 @@ class MyStreamingDataSource(MCPService):
                 }
             });
 
-            // 更新placeholder
+            // Update placeholders
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 const key = el.getAttribute('data-i18n-placeholder');
                 if (translations[lang][key]) {
@@ -758,17 +576,17 @@ class MyStreamingDataSource(MCPService):
                 }
             });
 
-            // 保存语言偏好到localStorage
+            // Save language preference to localStorage
             localStorage.setItem('preferred-language', lang);
         }
 
-        // 页面加载时检查语言偏好
+        // Check language preference on page load
         document.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('preferred-language') || 'zh';
             changeLanguage(savedLang);
         });
 
-        // FAQ折叠功能
+        // FAQ collapse functionality
         document.querySelectorAll('#faq button').forEach(button => {
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
@@ -784,7 +602,7 @@ class MyStreamingDataSource(MCPService):
             });
         });
 
-        // 返回顶部按钮
+        // Back to top button
         const backToTopButton = document.getElementById('back-to-top');
         
         window.addEventListener('scroll', () => {
@@ -804,7 +622,7 @@ class MyStreamingDataSource(MCPService):
             });
         });
 
-        // 移动端菜单
+        // Mobile menu
         const menuButton = document.querySelector('button.md\:hidden');
         const navMenu = document.querySelector('nav.md\:flex');
         
@@ -823,7 +641,7 @@ class MyStreamingDataSource(MCPService):
             navMenu.classList.toggle('z-50');
         });
 
-        // 平滑滚动
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -837,7 +655,7 @@ class MyStreamingDataSource(MCPService):
                         behavior: 'smooth'
                     });
                     
-                    // 关闭移动端菜单
+                    // Close mobile menu
                     if (!navMenu.classList.contains('md\:flex')) {
                         navMenu.classList.add('hidden');
                         navMenu.classList.remove('flex');
